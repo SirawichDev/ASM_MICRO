@@ -1,0 +1,28 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.6</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\5635512124\Desktop\program18\program18\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\5635512124\Desktop\program18\program18\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc\m328pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\5635512124\Desktop\program18\program18\Debug\program18.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>program18.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>program18.map</FILE>
+  <FILE>program18.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <loop><FILE>C:\Users\5635512124\Desktop\program18\program18\main.asm</FILE><LINE>30</LINE></loop>
+  <END><FILE>C:\Users\5635512124\Desktop\program18\program18\main.asm</FILE><LINE>36</LINE></END>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,35 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.6</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc\m328pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\Debug\AssemblerApplication1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>AssemblerApplication1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>AssemblerApplication1.map</FILE>
+  <FILE>AssemblerApplication1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>22</LINE></main>
+  <point_a><FILE>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>51</LINE></point_a>
+  <IFSTATE><FILE>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>29</LINE></IFSTATE>
+  <True><FILE>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>33</LINE></True>
+  <FALSE><FILE>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>37</LINE></FALSE>
+  <STORE><FILE>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>40</LINE></STORE>
+  <point_c><FILE>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>53</LINE></point_c>
+  <END><FILE>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>46</LINE></END>
+  <point_b><FILE>C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>52</LINE></point_b>
+ </LABELS>
+</ASSEMBLER_INFO>
