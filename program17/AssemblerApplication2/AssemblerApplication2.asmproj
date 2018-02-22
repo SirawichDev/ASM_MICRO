@@ -11,9 +11,9 @@
     <OutputFileExtension>.obj</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
     <Language>ASSEMBLY</Language>
-    <AssemblyName>AssemblerApplication1</AssemblyName>
-    <Name>AssemblerApplication1</Name>
-    <RootNamespace>AssemblerApplication1</RootNamespace>
+    <AssemblyName>AssemblerApplication2</AssemblyName>
+    <Name>AssemblerApplication2</Name>
+    <RootNamespace>AssemblerApplication2</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <EntryFile>$(MSBuildProjectDirectory)\main.asm</EntryFile>
     <KeepTimersRunning>true</KeepTimersRunning>

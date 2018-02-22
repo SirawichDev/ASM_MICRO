@@ -1,10 +1,10 @@
 
-AVRASM ver. 2.2.6  C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm Thu Feb 22 11:21:45 2018
+AVRASM ver. 2.2.6  C:\Users\5635512124\Desktop\program19\program19\main.asm Thu Feb 22 12:04:12 2018
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc\m328pdef.inc'
-C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm(10): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc\m328pdef.inc'
+C:\Users\5635512124\Desktop\program19\program19\main.asm(12): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc\m328pdef.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc\m328pdef.inc'
-C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm(10): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc\m328pdef.inc'
+C:\Users\5635512124\Desktop\program19\program19\main.asm(12): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc\m328pdef.inc'
                                  
                                  ;
                                  
@@ -987,14 +987,16 @@ C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm
                                  
                                  ; ***** END OF FILE ******************************************************
                                  
-                                 ; AssemblerApplication1.asm
+                                 ; program19.asm
                                  ;
-                                 ; Created: 2/22/2018 11:06:14 AM
+                                 ; Created: 2/22/2018 12:01:41 PM
                                  ; Author : 5635512124
                                  ;
                                  
                                  
                                  ; Replace with your application code
+                                 ;program 19
+                                 
                                  .include"m328pdef.inc"
                                  
                                  ;***** Created: 2011-02-09 12:03 ******* Source: ATmega328P.xml **********
@@ -1039,50 +1041,29 @@ C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm
                                  #endif  /* _M328PDEF_INC_ */
                                  
                                  ; ***** END OF FILE ******************************************************
-                                 
                                  .def var_a = r16
                                  .def var_b = r17
-                                 .def var_cl = r18
-                                 .def var_ch = r19
-                                 .def tmp = r20
+                                 .def var_I = r18
+                                 .def temp = r21
                                  
                                  .cseg
                                  .org 0x00
-000000 c000                      	rjmp main
                                  
-000001 e0aa                      main : ldi xl , low(point_a)
-000002 e0b1                      	   ldi xh, high(point_a)
-000003 910d                      	   ld var_a , x+
-000004 911d                      		ld var_b , x+
-000005 912d                      		ld var_cl , x+
-000006 913d                      		ld var_ch , x+
-000007 2744                      		clr tmp
-000008 1710                      IFSTATE : cp var_b,var_a
-000009 f408                      			brsh True
-00000a c003                      			rjmp FALSE
+000000 e00f                      	ldi var_a,15
+000001 e011                      	ldi var_b,1
+000002 e020                      	ldi var_I,0
+000003 e053                      	ldi temp,3
                                  
-00000b 0f20                      True : add var_cl , var_a
-00000c 1f34                      		adc var_ch,tmp
-00000d c002                      		rjmp STORE
+000004 1710                      WHILE:	cp var_b,var_a
+000005 f00c                      	brlt loop
+000006 c004                      	rjmp endloop
                                  
-00000e 0f21                      FALSE : add var_cl , var_b
-00000f 1f34                      		adc var_ch,tmp
-                                 
-000010 e0ec                      STORE : ldi zl, low(point_c)
-000011 e0f1                      		ldi zh, high(point_c)
-000012 9301                      		st z+,var_a
-000013 9311                      		st z+,var_b
-000014 9321                      		st z+,var_cl
-000015 9331                      		st z+,var_ch
-000016 cfff                      END : rjmp END
-                                 
+000007 0215                      loop: muls var_b,temp
+000008 2d10                      	mov var_b,r0
+000009 9523                      	inc var_I
+00000a cff9                      	rjmp WHILE
+00000b cfff                      endloop: rjmp endloop
                                  .dseg
-                                 .org 0x10A
-                                 
-00010a                           point_a  : .byte 1
-00010b                           point_b  : .byte 1
-00010c                           point_c  : .byte 2
-                                 
                                  .eseg
 
 
@@ -1101,40 +1082,40 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATmega328P" register use summary:
-x  :   4 y  :   0 z  :   4 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
+x  :   0 y  :   0 z  :   0 r0 :   1 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:   4 r17:   4 r18:   4 r19:   4 r20:   3 
-r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   1 r27:   1 r28:   0 
-r29:   0 r30:   1 r31:   1 
-Registers used: 11 out of 35 (31.4%)
+r13:   0 r14:   0 r15:   0 r16:   2 r17:   4 r18:   2 r19:   0 r20:   0 
+r21:   2 r22:   0 r23:   0 r24:   0 r25:   0 r26:   0 r27:   0 r28:   0 
+r29:   0 r30:   0 r31:   0 
+Registers used: 5 out of 35 (14.3%)
 
 "ATmega328P" instruction use summary:
-.lds  :   0 .sts  :   0 adc   :   2 add   :   2 adiw  :   0 and   :   0 
+.lds  :   0 .sts  :   0 adc   :   0 add   :   0 adiw  :   0 and   :   0 
 andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
 brcc  :   0 brcs  :   0 break :   0 breq  :   0 brge  :   0 brhc  :   0 
-brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
-brne  :   0 brpl  :   0 brsh  :   1 brtc  :   0 brts  :   0 brvc  :   0 
+brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   1 brmi  :   0 
+brne  :   0 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  :   0 cbi   :   0 cbr   :   0 
-clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   1 cls   :   0 
+clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   1 cpc   :   0 
 cpi   :   0 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   0 ijmp  :   0 in    :   0 inc   :   0 jmp   :   0 
-ld    :   4 ldd   :   0 ldi   :   4 lds   :   0 lpm   :   0 lsl   :   0 
-lsr   :   0 mov   :   0 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
+fmulsu:   0 icall :   0 ijmp  :   0 in    :   0 inc   :   1 jmp   :   0 
+ld    :   0 ldd   :   0 ldi   :   4 lds   :   0 lpm   :   0 lsl   :   0 
+lsr   :   0 mov   :   1 movw  :   0 mul   :   0 muls  :   1 mulsu :   0 
 neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   0 pop   :   0 
-push  :   0 rcall :   0 ret   :   0 reti  :   0 rjmp  :   4 rol   :   0 
+push  :   0 rcall :   0 ret   :   0 reti  :   0 rjmp  :   3 rol   :   0 
 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   0 sec   :   0 seh   :   0 
 sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
-sez   :   0 sleep :   0 spm   :   0 st    :   4 std   :   0 sts   :   0 
+sez   :   0 sleep :   0 spm   :   0 st    :   0 std   :   0 sts   :   0 
 sub   :   0 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
-Instructions used: 9 out of 113 (8.0%)
+Instructions used: 7 out of 113 (6.2%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x00002e     46      0     46   32768   0.1%
-[.dseg] 0x000100 0x00010e      0      4      4    2048   0.2%
+[.cseg] 0x000000 0x000018     24      0     24   32768   0.1%
+[.dseg] 0x000100 0x000100      0      0      0    2048   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 
 Assembly complete, 0 errors, 0 warnings

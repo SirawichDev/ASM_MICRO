@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.6  C:\Users\5635512124\Desktop\AssemblerApplication1\AssemblerApplication1\main.asm Thu Feb 22 11:21:45 2018
+AVRASM ver. 2.2.6  C:\Users\5635512124\Desktop\program5\program5\main.asm Thu Feb 22 12:08:04 2018
 
 
 EQU  SIGNATURE_000 0000001e
@@ -695,17 +695,11 @@ EQU  ACIaddr      0000002e
 EQU  TWIaddr      00000030
 EQU  SPMRaddr     00000032
 EQU  INT_VECTORS_SIZE 00000034
-DEF  var_a        r16
-DEF  var_b        r17
-DEF  var_cl       r18
-DEF  var_ch       r19
-DEF  tmp          r20
-CSEG main         00000001
-DSEG point_a      0000010a
-CSEG IFSTATE      00000008
-CSEG True         0000000b
-CSEG FALSE        0000000e
-CSEG STORE        00000010
-DSEG point_c      0000010c
-CSEG END          00000016
-DSEG point_b      0000010b
+DEF  VAR_AL       r16
+DEF  VAR_AH       r17
+DEF  VAR_B        r18
+DEF  VAR_C        r19
+DSEG TMP_I        00000100
+CSEG END          0000000a
+DSEG TMP_J        00000101
+DSEG TMP_K        00000102
