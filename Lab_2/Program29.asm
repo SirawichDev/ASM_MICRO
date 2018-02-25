@@ -3,7 +3,8 @@
 	;
 	; Created: 24/2/2561 18:37:45
 	; Author : TimeStoper
-
+	; 0x3FF - 0x100 + 1 = 0x2FF + 1 = 0x300
+	; 0x300 = 3*16^2 = 768 => 4*192 
 	;for(i=0;i<4;i++){
 	;	for(j=0;j<192;j++){		
 	;		ld var_tmp,z+
